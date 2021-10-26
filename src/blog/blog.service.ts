@@ -16,10 +16,11 @@ export class BlogService {
 
   async updateArticle(issueNumber: number, updateBlogDto: CreateBlogDto): Promise<Blog> {
     const blog = await this.blogRepository.findOne(issueNumber)
-    blog.issueNumber = updateBlogDto.issueNumber
+    blog.issueNumber = issueNumber
     blog.author = updateBlogDto.author
     blog.title = updateBlogDto.title
-    return await this.blogRepository.save(blog)
+    await this.blogRepository.update(updateBlogDto, blog)
+    return this.blogRepository.findOne(blog.issueNumber)
   }
 
   deleteArticle(issueNumber: number) {

@@ -1,5 +1,5 @@
 interface Blog {
-  issueNumber: number
-  author: string
-  title: string
+  issueNumber?: number
+  author?: string
+  title?: string
 }
