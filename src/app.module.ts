@@ -10,6 +10,7 @@ import { BlogModule } from './blog/blog.module';
 import { DatabaseModule } from './database/database.module';
 import { LoggerMiddleware } from './middleware/logger.middleware'
 
+bbb error test
 @Module({
   imports: [BlogModule, DatabaseModule],
   controllers: [AppController],
