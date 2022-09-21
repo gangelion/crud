@@ -2,11 +2,12 @@ import { Controller, Get } from '@nestjs/common';
 import { AppService } from './app.service';
 
 interface MenuItem {
-  title?: string
-  to?: string
-  click?: Function
-  icon?: string
+  title?: string;
+  to?: string;
+  click?: Function;
+  icon?: string;
 }
+error test;
 @Controller()
 export class AppController {
   constructor(private readonly appService: AppService) {}
